@@ -1243,7 +1243,7 @@ input {
   margin-bottom: 14px;
 }
 .app-button {
-  max-width: 100%;
+  width: 150px;
 }
 @media screen and (min-width: 720px) {
   .margin-top-micro {
@@ -1649,6 +1649,9 @@ input {
   }
   #input-name {
     margin-bottom: 0;
+  }
+  .app-button {
+    width: auto;
   }
 }
 @media screen and (min-width: 1024px) {
