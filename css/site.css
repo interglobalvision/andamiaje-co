@@ -623,7 +623,7 @@ template {
 }
 @font-face {
   font-family: 'SuisseIntl-Light';
-  src: url("SuisseIntl-Light.woff2") format('woff2'), url("SuisseIntl-Light.woff") format('woff');
+  src: url("fonts/SuisseIntl-Light.woff2") format('woff2'), url("fonts/SuisseIntl-Light.woff") format('woff');
   font-weight: 300;
   font-style: normal;
 }
