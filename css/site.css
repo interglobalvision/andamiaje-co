@@ -1259,9 +1259,6 @@ input {
   width: 150px;
   height: auto;
 }
-#mockup {
-  max-width: 400px;
-}
 @media screen and (min-width: 720px) {
   .margin-top-micro {
     margin-top: 7px;
@@ -2059,6 +2056,9 @@ input {
   }
   .full-height {
     min-height: calc(100vh + 120px);
+  }
+  #mockup {
+    max-width: 400px;
   }
 }
 @media screen and (min-width: 1280px) {
