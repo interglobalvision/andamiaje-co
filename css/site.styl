@@ -31,6 +31,7 @@ $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
 $color-grey = rgb(216, 216, 216)
 $color-grey-dark = rgb(130, 130, 130)
+$color-blue = lightblue
 
 // ******************************************************
 
@@ -61,9 +62,13 @@ input[type="text"], input[type="email"]
   border: 0
   border-bottom: $color-grey-dark solid 1px
   font-weight: normal
+  width: 100%
   &::placeholder
     color: $color-grey
     font-weight: normal
+  &:focus
+    outline: none
+    border-bottom-color: $color-blue
 
 button
   appearance: none
@@ -85,13 +90,14 @@ $margin-large = ($gutter * 5)
 
 $font-size-basic = 16px
 $font-size-small = 14px
-$font-size-tiny = 9px
+$font-size-tiny = 11px
+$font-size-micro = 8px
 
 grid(96%, $gutter, s)
 
 space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
-font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
+font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, $font-size-micro)
 
 @import 'responsive/mobile'
 
@@ -108,13 +114,14 @@ font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-t
 
   $font-size-basic = 18px
   $font-size-small = 16px
-  $font-size-tiny = 10px
+  $font-size-tiny = 12px
+  $font-size-micro = 9px
 
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
   grid(680px, $gutter, m)
 
-  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
+  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, $font-size-micro)
 
   .mobile-only
     display: none !important
@@ -145,15 +152,18 @@ font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-t
 
   $font-size-basic = 21px
   $font-size-small = 18px
-  $font-size-tiny = 11px
+  $font-size-tiny = 14px
+  $font-size-micro = 11px
 
   grid(1200px)
 
-  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
+  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, $font-size-micro)
 
 @media screen and (min-width: 1366px)
 
-  grid(1300px)
+  $gutter = 30px
+
+  grid(1300px, $gutter, l)
 
 /*
 @media screen and (min-width: 1680px)
