@@ -10,6 +10,12 @@ Site = {
       _this.onResize();
     });
 
+    $('.js-scroll-to-downloads').click(function() {
+      $('html, body').animate({
+          scrollTop: $("#downloads").offset().top
+      }, 1500);
+    });
+
   },
 
   onResize: function() {
