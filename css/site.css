@@ -829,11 +829,18 @@ button {
   border: 0;
   background: transparent;
 }
+button:focus {
+  outline: none;
+}
+button:focus #chevron {
+  border-color: #add8e6;
+}
 .container {
   width: 96%;
 }
 .grid-item {
-  padding: 0 7px;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 .grid-item.no-gutter {
   padding-left: 0;
@@ -1236,8 +1243,8 @@ input {
   border-width: 1px 1px 0 0;
   border-style: solid;
   border-color: #828282;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
 }
 #input-name {
   margin-bottom: 14px;
@@ -1322,7 +1329,8 @@ input {
     width: 680px;
   }
   .grid-item {
-    padding: 0 10.5px;
+    padding-left: 10.5px;
+    padding-right: 10.5px;
   }
   .grid-item.no-gutter {
     padding-left: 0;
@@ -1659,7 +1667,8 @@ input {
     width: 1000px;
   }
   .grid-item {
-    padding: 0 12px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   .grid-item.no-gutter {
     padding-left: 0;
@@ -2065,7 +2074,8 @@ input {
     width: 1300px;
   }
   .grid-item {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .grid-item.no-gutter {
     padding-left: 0;
