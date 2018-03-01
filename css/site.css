@@ -1257,6 +1257,10 @@ input {
 }
 .app-button {
   width: 150px;
+  height: auto;
+}
+#mockup {
+  max-width: 400px;
 }
 @media screen and (min-width: 720px) {
   .margin-top-micro {
