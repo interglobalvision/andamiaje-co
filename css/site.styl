@@ -29,6 +29,8 @@ normalize()
 
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
+$color-grey = rgb(216, 216, 216)
+$color-grey-dark = rgb(130, 130, 130)
 
 // ******************************************************
 
@@ -48,14 +50,28 @@ img
 .desktop-only
   display: none !important
 
-#logo
-  max-width: 800px
+.color-grey-dark
+  color: $color-grey-dark
 
-#logo-holder
-  width: 100%
+.border-top
+  border-top: $color-grey solid 1px
 
 .full-height
   min-height: 100vh
+
+input[type="text"], input[type="email"]
+  appearance: none
+  border: 0
+  border-bottom: $color-grey-dark solid 1px
+  font-weight: normal
+  &::placeholder
+    color: $color-grey
+    font-weight: normal
+
+button
+  appearance: none
+  border: 0
+  background: transparent
 
 // ******************************************************
 
@@ -64,25 +80,21 @@ img
 $gutter = 14px
 
 $margin-micro = ($gutter / 3)
-$margin-tiny = ($gutter / 2)
+$margin-tiny = ($gutter / 2) 
 $margin-small = ($gutter)
 $margin-basic = ($gutter * 2)
 $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
 
-$font-size-basic = 12px
-$font-size-extra = 36px
-$font-size-large = 28px
-$font-size-mid = 21px
-$font-size-small = 16px
-$font-size-tiny = 12px
-$font-size-micro = 10px
+$font-size-basic = 16px
+$font-size-small = 14px
+$font-size-tiny = 9px
 
 grid(96%, $gutter, s)
 
 space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
-font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny, $font-size-micro)
+font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
 
 @import 'responsive/mobile'
 
@@ -97,13 +109,15 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
 
-  $font-size-basic = 14px
+  $font-size-basic = 18px
+  $font-size-small = 16px
+  $font-size-tiny = 10px
 
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
   grid(680px, $gutter, m)
 
-  font-size($font-size-basic)
+  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
 
   .mobile-only
     display: none !important
@@ -121,13 +135,15 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
 
-  $font-size-basic = 16px
+  $font-size-basic = 21px
+  $font-size-small = 18px
+  $font-size-tiny = 11px
 
   grid(1000px, $gutter, l)
 
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
-  font-size($font-size-basic)
+  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
 
   .desktop-only
     display: initial !important
@@ -138,10 +154,11 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
 
   grid(1200px)
 
+
 @media screen and (min-width: 1366px)
 
   grid(1300px)
-
+/*
 @media screen and (min-width: 1680px)
 
   grid(1600px)
@@ -149,3 +166,4 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
 @media screen and (min-width: 1920px)
 
   grid(1800px)
+*/
