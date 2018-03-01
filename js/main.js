@@ -12,7 +12,7 @@ Site = {
 
     $('.js-scroll-to-downloads').click(function() {
       $('html, body').animate({
-          scrollTop: $("#downloads").offset().top
+          scrollTop: $("#downloads").offset().top - 30
       }, 1500);
     });
 
