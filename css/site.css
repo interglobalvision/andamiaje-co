@@ -766,7 +766,10 @@ img {
 #logo {
   max-width: 800px;
 }
-.min-height-full {
+#logo-holder {
+  width: 100%;
+}
+.full-height {
   min-height: 100vh;
 }
 .container {
@@ -1036,7 +1039,7 @@ html,
   font-size: 12px;
 }
 .font-size-extra {
-  font-size: font-size-extra;
+  font-size: 36px;
 }
 .font-size-large {
   font-size: 28px;
