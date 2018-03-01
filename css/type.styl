@@ -1,8 +1,32 @@
 // FONTS
 
 // declare font families here
-  
-$font-sans = font-stack('Helvetica');
+
+@font-face {
+    font-family: 'SuisseIntl-Light';
+    src: url('SuisseIntl-Light.woff2') format('woff2'),
+        url('SuisseIntl-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Regular';
+  src: url('fonts/SuisseIntl-Regular.woff2') format('woff2'),
+      url('fonts/SuisseIntl-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl-Medium';
+  src: url('fonts/SuisseIntl-Medium.woff2') format('woff2'),
+      url('fonts/SuisseIntl-Medium.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-sans = 'SuisseIntl-Regular', font-stack('Helvetica');
 $font-serif = font-stack('Georgia');
 
 // ******************************************************
@@ -41,18 +65,18 @@ html
 
 body
   line-height: $font-leading-basic
-  
+
 p
   margin-bottom: 1rem
-  
+
 // FONT RULES
-  
+
 .font-sans
   font-family: $font-sans
-  
+
 .font-serif
   font-family: $font-serif
-  
+
 .font-larger
   font-size: $font-size-larger
 
@@ -60,7 +84,12 @@ p
   font-style: italic
 
 .font-bold
+  font-family: 'SuisseIntl-Medium'
   font-weight: bold
+
+.font-light
+  font-family: 'SuisseIntl-Light'
+  font-weight: 300
 
 .font-small-caps
   text-transform: uppercase
@@ -93,34 +122,34 @@ a:active,
 a:visited
   color: inherit
   text-decoration: none
-  
+
 font-sizes($size-basic = false, $size-extra = false, $size-large = false, $size-mid = false, $size-small = false, $size-tiny = false, $size-micro = false)
 
-  if ($size-basic) 
-    html, 
+  if ($size-basic)
+    html,
     .font-size-basic
       font-size: $size-basic
-    
-  if ($size-extra) 
+
+  if ($size-extra)
     .font-size-extra
       font-size: $size-extra
-      
-  if ($size-large) 
+
+  if ($size-large)
     .font-size-large
       font-size: $size-large
-      
-  if ($size-mid) 
+
+  if ($size-mid)
     .font-size-mid
       font-size: $size-mid
-      
-  if ($size-small) 
+
+  if ($size-small)
     .font-size-small
       font-size: $size-small
-      
-  if ($size-tiny) 
+
+  if ($size-tiny)
     .font-size-tiny
       font-size: $size-tiny
-      
-  if ($size-micro) 
+
+  if ($size-micro)
     .font-size-micro
       font-size: $size-micro
