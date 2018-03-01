@@ -787,9 +787,6 @@ img {
 .border-top {
   border-top: #d8d8d8 solid 1px;
 }
-.full-height {
-  min-height: 100vh;
-}
 input[type="text"],
 input[type="email"] {
   -webkit-appearance: none;
@@ -1211,6 +1208,7 @@ html,
 }
 #logo-holder {
   width: 100%;
+  min-height: 50vh;
 }
 #footer {
   background-color: #000;
@@ -2014,16 +2012,6 @@ input {
   .padding-bottom-large {
     padding-bottom: 120px;
   }
-  html,
-  .font-size-basic {
-    font-size: 21px;
-  }
-  .font-size-small {
-    font-size: 18px;
-  }
-  .font-size-tiny {
-    font-size: 11px;
-  }
   .desktop-only {
     display: initial !important;
   }
@@ -2038,10 +2026,23 @@ input {
     width: 20px;
     height: 20px;
   }
+  .full-height {
+    min-height: 100vh;
+  }
 }
 @media screen and (min-width: 1280px) {
   .container {
     width: 1200px;
+  }
+  html,
+  .font-size-basic {
+    font-size: 21px;
+  }
+  .font-size-small {
+    font-size: 18px;
+  }
+  .font-size-tiny {
+    font-size: 11px;
   }
 }
 @media screen and (min-width: 1366px) {

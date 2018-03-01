@@ -56,9 +56,6 @@ img
 .border-top
   border-top: $color-grey solid 1px
 
-.full-height
-  min-height: 100vh
-
 input[type="text"], input[type="email"]
   appearance: none
   border: 0
@@ -80,7 +77,7 @@ button
 $gutter = 14px
 
 $margin-micro = ($gutter / 3)
-$margin-tiny = ($gutter / 2) 
+$margin-tiny = ($gutter / 2)
 $margin-small = ($gutter)
 $margin-basic = ($gutter * 2)
 $margin-mid = ($gutter * 3.5)
@@ -135,15 +132,9 @@ font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-t
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
 
-  $font-size-basic = 21px
-  $font-size-small = 18px
-  $font-size-tiny = 11px
-
   grid(1000px, $gutter, l)
 
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
-
-  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
 
   .desktop-only
     display: initial !important
@@ -152,12 +143,18 @@ font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-t
 
 @media screen and (min-width: 1280px)
 
+  $font-size-basic = 21px
+  $font-size-small = 18px
+  $font-size-tiny = 11px
+
   grid(1200px)
 
+  font-sizes($font-size-basic, false, false, false, $font-size-small, $font-size-tiny, false)
 
 @media screen and (min-width: 1366px)
 
   grid(1300px)
+
 /*
 @media screen and (min-width: 1680px)
 
